@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8q0ddsmssv4i"]
+
+[ext_resource type="Texture2D" uid="uid://5q77mwln8rth" path="res://images/root.png" id="1_q4xe6"]
+[ext_resource type="Script" path="res://root.gd" id="1_uh8a1"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uh8a1")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_q4xe6")
+centered = false
+
+[node name="hole button" type="Button" parent="."]
+offset_left = 525.0
+offset_top = 195.0
+offset_right = 674.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 20
+text = "hole training :)"
