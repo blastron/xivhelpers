@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func hole_button_pressed():
-	get_tree().change_scene_to_file("res://hole.tscn")
+	get_tree().change_scene_to_file("res://hole/hole.tscn")
