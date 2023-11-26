@@ -50,11 +50,11 @@ func _input(event):
 	if active:
 		if event.is_action("up"):
 			set_player_facing(0)
-		elif event.is_action("left"):
+		elif event.is_action("right"):
 			set_player_facing(1)
 		elif event.is_action("down"):
 			set_player_facing(2)
-		elif event.is_action("right"):
+		elif event.is_action("left"):
 			set_player_facing(3)
 		elif event.is_action("select"):
 			evaluate_selection()
