@@ -10,10 +10,18 @@ script = ExtResource("1_uh8a1")
 texture = ExtResource("1_q4xe6")
 centered = false
 
+[node name="planar button" type="Button" parent="."]
+offset_left = 514.0
+offset_top = 198.0
+offset_right = 663.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 20
+text = "planar tactics"
+
 [node name="hole button" type="Button" parent="."]
-offset_left = 525.0
-offset_top = 195.0
-offset_right = 674.0
-offset_bottom = 231.0
+offset_left = 524.0
+offset_top = 139.0
+offset_right = 673.0
+offset_bottom = 175.0
 theme_override_font_sizes/font_size = 20
 text = "hole training :)"

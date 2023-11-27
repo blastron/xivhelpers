@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyja0qy7ra4wp"]
+
+[ext_resource type="Script" path="res://planar/tile.gd" id="1_c5stx"]
+[ext_resource type="Texture2D" uid="uid://c7utck086rg53" path="res://images/planar/editor_1.png" id="1_xu8qy"]
+[ext_resource type="Texture2D" uid="uid://ogkjaidoocsi" path="res://images/planar/editor_2_tm.png" id="2_j4byv"]
+[ext_resource type="Texture2D" uid="uid://bgtwhjqgj4hkp" path="res://images/planar/editor_0.png" id="2_xeroj"]
+[ext_resource type="Texture2D" uid="uid://bg3miivjjjmny" path="res://images/planar/editor_2_rh.png" id="3_jxs0a"]
+[ext_resource type="Texture2D" uid="uid://cnvmqsq58jj4m" path="res://images/planar/editor_3.png" id="4_cayna"]
+[ext_resource type="Texture2D" uid="uid://b8321f2vdy81x" path="res://images/planar/result_check.png" id="5_k7w73"]
+[ext_resource type="Texture2D" uid="uid://kel3h718v23p" path="res://images/planar/result_cross.png" id="6_pylej"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p5pfs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xeroj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_xu8qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j4byv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jxs0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cayna")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xft6e"]
+size = Vector2(40, 40)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_c5stx")
+
+[node name="Editor Player Icons" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p5pfs")
+
+[node name="Check" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_k7w73")
+
+[node name="Cross" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_pylej")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("RectangleShape2D_xft6e")

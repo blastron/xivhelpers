@@ -1,0 +1,405 @@
+[gd_scene load_steps=32 format=3 uid="uid://ywbhsugpj13a"]
+
+[ext_resource type="Texture2D" uid="uid://s4e5m2ekbpfl" path="res://images/planar/board.png" id="1_nwu7m"]
+[ext_resource type="PackedScene" uid="uid://cyja0qy7ra4wp" path="res://planar/tile.tscn" id="2_jmsem"]
+[ext_resource type="Script" path="res://planar/board.gd" id="2_wpfof"]
+[ext_resource type="Texture2D" uid="uid://ecn8unlrmis6" path="res://images/planar/tile_2_2.png" id="4_xgm62"]
+[ext_resource type="Texture2D" uid="uid://o3w6pb57vdhe" path="res://images/planar/tile_2_2_explosion.png" id="5_a56w0"]
+[ext_resource type="Texture2D" uid="uid://du3jhtudymmal" path="res://images/planar/tile_2_3.png" id="6_lxtjd"]
+[ext_resource type="Texture2D" uid="uid://l87thhc2ei0k" path="res://images/planar/tile_2_3_explosion.png" id="7_fatfj"]
+[ext_resource type="Texture2D" uid="uid://cr1covy0p6l23" path="res://images/planar/tile_2_4.png" id="8_uifcp"]
+[ext_resource type="Texture2D" uid="uid://dfi8rnv1ah3nf" path="res://images/planar/tile_2_4_explosion.png" id="9_ogdpx"]
+[ext_resource type="Texture2D" uid="uid://dd8em8ju7tsfx" path="res://images/planar/tile_3_2.png" id="10_m37kh"]
+[ext_resource type="Texture2D" uid="uid://dqdupjc7yf500" path="res://images/planar/tile_3_2_explosion.png" id="11_hr8ja"]
+[ext_resource type="Texture2D" uid="uid://2136c4v7ieau" path="res://images/planar/tile_3_3.png" id="12_lopuo"]
+[ext_resource type="Texture2D" uid="uid://dinek143lo1np" path="res://images/planar/tile_3_3_explosion.png" id="13_vuhy6"]
+[ext_resource type="Texture2D" uid="uid://crldsfiekrijl" path="res://images/planar/tile_3_4.png" id="14_wgyug"]
+[ext_resource type="Texture2D" uid="uid://swdvlbyysauq" path="res://images/planar/tile_3_4_explosion.png" id="15_2bdgi"]
+[ext_resource type="Texture2D" uid="uid://i7tejn7hvvh8" path="res://images/planar/tile_4_2.png" id="16_vew6b"]
+[ext_resource type="Texture2D" uid="uid://3vuhaxh6c6vm" path="res://images/planar/tile_4_2_explosion.png" id="17_5228l"]
+[ext_resource type="Texture2D" uid="uid://b25ok5d5i53m0" path="res://images/planar/tile_4_3.png" id="18_pig0q"]
+[ext_resource type="Texture2D" uid="uid://dmxn5eni22pas" path="res://images/planar/tile_4_3_explosion.png" id="19_n1lx4"]
+[ext_resource type="Texture2D" uid="uid://bspsmkygc1otm" path="res://images/planar/tile_4_4.png" id="20_1twqg"]
+[ext_resource type="Texture2D" uid="uid://dsdodfrdu4doy" path="res://images/planar/tile_4_4_explosion.png" id="21_yxmna"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56iem"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xgm62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a56w0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wobtl"]
+size = Vector2(86, 86)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mpufj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lxtjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fatfj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbrmk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uifcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ogdpx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vit3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_m37kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hr8ja")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oog0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_lopuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vuhy6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vam5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_wgyug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2bdgi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6egj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_vew6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5228l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36v7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_pig0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_n1lx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7p1yh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_1twqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yxmna")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Board" type="Sprite2D"]
+texture = ExtResource("1_nwu7m")
+centered = false
+script = ExtResource("2_wpfof")
+
+[node name="edge 2-1" type="Node2D" parent="."]
+position = Vector2(142, 52)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 2-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 2-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 2-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 2-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 2-2" type="Node2D" parent="."]
+position = Vector2(235, 52)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 2-2" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 2-2" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 2-2" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 2-2" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 2-3" type="Node2D" parent="."]
+position = Vector2(328, 52)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 2-3" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 2-3" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 2-3" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 2-3" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 3-1" type="Node2D" parent="."]
+position = Vector2(52, 142)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 3-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 3-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 3-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 3-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 3-5" type="Node2D" parent="."]
+position = Vector2(416, 142)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 3-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 3-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 3-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 3-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 4-1" type="Node2D" parent="."]
+position = Vector2(52, 234)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 4-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 4-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 4-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 4-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 4-5" type="Node2D" parent="."]
+position = Vector2(416, 234)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 4-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 4-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 4-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 4-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 5-1" type="Node2D" parent="."]
+position = Vector2(52, 326)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 5-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 5-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 5-1" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 5-1" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 5-5" type="Node2D" parent="."]
+position = Vector2(416, 326)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 5-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 5-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 5-5" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 5-5" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 6-2" type="Node2D" parent="."]
+position = Vector2(142, 416)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 6-2" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 6-2" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 6-2" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 6-2" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 6-3" type="Node2D" parent="."]
+position = Vector2(235, 416)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 6-3" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 6-3" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 6-3" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 6-3" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="edge 6-4" type="Node2D" parent="."]
+position = Vector2(328, 416)
+metadata/_edit_group_ = true
+
+[node name="A" parent="edge 6-4" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, -23)
+
+[node name="B" parent="edge 6-4" instance=ExtResource("2_jmsem")]
+position = Vector2(23, -23)
+
+[node name="C" parent="edge 6-4" instance=ExtResource("2_jmsem")]
+position = Vector2(-23, 23)
+
+[node name="D" parent="edge 6-4" instance=ExtResource("2_jmsem")]
+position = Vector2(23, 23)
+
+[node name="center 2-2" type="AnimatedSprite2D" parent="."]
+position = Vector2(142, 142)
+sprite_frames = SubResource("SpriteFrames_56iem")
+
+[node name="collision" type="Area2D" parent="center 2-2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center 2-2/collision"]
+shape = SubResource("RectangleShape2D_wobtl")
+
+[node name="center 2-3" type="AnimatedSprite2D" parent="."]
+position = Vector2(233, 143)
+sprite_frames = SubResource("SpriteFrames_mpufj")
+
+[node name="center 2-4" type="AnimatedSprite2D" parent="."]
+position = Vector2(325, 142)
+sprite_frames = SubResource("SpriteFrames_jbrmk")
+
+[node name="collision" type="Area2D" parent="center 2-4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center 2-4/collision"]
+shape = SubResource("RectangleShape2D_wobtl")
+
+[node name="center 3-2" type="AnimatedSprite2D" parent="."]
+position = Vector2(144, 235)
+sprite_frames = SubResource("SpriteFrames_1vit3")
+
+[node name="center 3-3" type="AnimatedSprite2D" parent="."]
+position = Vector2(234, 234)
+sprite_frames = SubResource("SpriteFrames_oog0i")
+
+[node name="center 3-4" type="AnimatedSprite2D" parent="."]
+position = Vector2(326, 236)
+sprite_frames = SubResource("SpriteFrames_vam5n")
+
+[node name="center 4-2" type="AnimatedSprite2D" parent="."]
+position = Vector2(143, 326)
+sprite_frames = SubResource("SpriteFrames_h6egj")
+
+[node name="collision" type="Area2D" parent="center 4-2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center 4-2/collision"]
+shape = SubResource("RectangleShape2D_wobtl")
+
+[node name="center 4-3" type="AnimatedSprite2D" parent="."]
+position = Vector2(234, 326)
+sprite_frames = SubResource("SpriteFrames_36v7a")
+
+[node name="center 4-4" type="AnimatedSprite2D" parent="."]
+position = Vector2(326, 327)
+sprite_frames = SubResource("SpriteFrames_7p1yh")
+
+[node name="collision" type="Area2D" parent="center 4-4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center 4-4/collision"]
+shape = SubResource("RectangleShape2D_wobtl")
